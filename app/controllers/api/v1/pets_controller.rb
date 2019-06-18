@@ -1,5 +1,5 @@
 class Api::V1::PetsController < ApplicationController
-  before_action :find_pet, only: [:update]
+  before_action :find_pet, only: [:update, :show]
 
   def index
     @pets = Pet.all
@@ -17,10 +17,14 @@ class Api::V1::PetsController < ApplicationController
     end
   end
 
+  def show
+    render json: @pet
+  end
+
   private
 
   def pet_params
-    params.permit(:name)
+    params.permit(:id, :name)
   end
 
   def find_pet
