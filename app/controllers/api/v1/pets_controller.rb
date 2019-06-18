@@ -10,10 +10,10 @@ class Api::V1::PetsController < ApplicationController
     @pet.update(pet_params)
     if @pet.save
       render json: @pet,
-        status: :accepted
+      status: :accepted
     else
       render json: { errors: @pet.errors.full_messages },
-        status: :unprocessible_entity
+      status: :unprocessible_entity
     end
   end
 
