@@ -1,4 +1,4 @@
 class UserSerializer < ActiveModel::Serializer
   has_many :pets
-  attributes :name
+  attributes :id, :name
 end
