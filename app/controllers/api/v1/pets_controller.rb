@@ -6,6 +6,27 @@ class Api::V1::PetsController < ApplicationController
     render json: @pets
   end
 
+  def create
+    @pet = Pet.new
+    @pet.name = pet_params[:name]
+    @pet.img = "./src/img/egg.png"
+    @pet.health = 3
+    @pet.happiness = 3
+    @pet.skill_points = 0
+    @pet.age = "baby"
+    @pet.weight = 1
+    @pet.specialty = pet_params[:specialty]
+    @pet.hungry = true
+    @pet.dirty = false
+    @pet.user_id = pet_params[:user]
+
+    if @pet.save
+      render json: @pet, status: :accepted
+    else
+      render json: { errors: @pet.errors.full_messages }, status: :unprocessible_entity
+    end
+  end
+
   def update
     @pet.update(pet_params)
     if @pet.save
@@ -24,7 +45,7 @@ class Api::V1::PetsController < ApplicationController
   private
 
   def pet_params
-    params.permit(:id, :name)
+    params.require(:pet).permit(:name, :specialty, :user)
   end
 
   def find_pet
