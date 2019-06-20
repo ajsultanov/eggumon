@@ -1,5 +1,6 @@
 class Api::V1::PetsController < ApplicationController
   before_action :find_pet, only: [:update, :show]
+  before_action :find_user, only: [:create]
 
   def index
     @pets = Pet.all
@@ -18,7 +19,7 @@ class Api::V1::PetsController < ApplicationController
     @pet.specialty = pet_params[:specialty]
     @pet.hungry = true
     @pet.dirty = false
-    @pet.user_id = pet_params[:user]
+    @pet.user = @user
 
     if @pet.save
       render json: @pet, status: :accepted
@@ -50,5 +51,9 @@ class Api::V1::PetsController < ApplicationController
 
   def find_pet
     @pet = Pet.find(params[:id])
+  end
+
+  def find_user
+    @user = User.find(params[:user])
   end
 end
