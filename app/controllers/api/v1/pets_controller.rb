@@ -10,7 +10,7 @@ class Api::V1::PetsController < ApplicationController
   def create
     @pet = Pet.new
     @pet.name = pet_params[:name]
-    @pet.img = "./src/img/egg.png"
+    @pet.img = "egg.png"
     @pet.health = 3
     @pet.happiness = 3
     @pet.skill_points = 0
