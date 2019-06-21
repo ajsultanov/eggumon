@@ -14,7 +14,7 @@ class Api::V1::PetsController < ApplicationController
     @pet.health = 3
     @pet.happiness = 3
     @pet.skill_points = 0
-    @pet.age = "baby"
+    @pet.age = "egg"
     @pet.weight = 1
     @pet.specialty = pet_params[:specialty]
     @pet.hungry = true
