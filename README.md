@@ -1,28 +1,18 @@
-# README
+# エッグモン
 
-## エッグモン
+### Eggumon is a virtual pet game where you hatch eggs and raise monsters!
 
-### （　卵鬼　）
+> TK Image
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Link to repository for the frontend](https://github.com/ajsultanov/eggumon-frontend)
 
-Things you may want to cover:
+#### Made with:
+- JavaScript
+- Rails API
+- Custom CSS
+- Custom pixel art sprites
+- Postgres
 
-* Ruby version
+> TK demo video/link
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Evoking browser games of the '90s and '00s, in Eggumon a user hatches their own (random) monster from an egg. Then they feed, clean up after, and train their pets until they are ready to evolve to the next level, and a new random sprite is generated.
