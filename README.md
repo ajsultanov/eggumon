@@ -2,11 +2,11 @@
 
 ![title page](./public/1.png)
 
-### Eggumon is a virtual pet game where you hatch eggs and raise monsters!
+### ![3a](./public/3a.gif) Eggumon is a virtual pet game where you hatch eggs and raise monsters!
 
-[Link to repository for the backend](https://github.com/ajsultanov/eggumon-backend)
+[Link to repository for the frontend](https://github.com/ajsultanov/eggumon-frontend)
 
-#### Made with:
+#### ![3e](./public/3e.gif) Made with:
 - JavaScript
 - Rails API
 - Custom CSS
@@ -35,6 +35,6 @@ Be careful not to let health or happiness reach zero!
 
 [code](https://github.com/ajsultanov/eggumon-frontend/blob/master/src/index.js)
 
-
+![3i](./public/3i.gif)
 
 [sprites!](https://github.com/ajsultanov/eggumon-frontend/tree/master/src/img)
